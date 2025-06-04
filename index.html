@@ -1,102 +1,155 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offres d'emploi à Dubaï</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offres d'emploi à Dubaï</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .hero {
-            background-color: #007BFF;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
 
-        .jobs {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            padding: 20px;
-        }
+    header {
+      background: linear-gradient(135deg, #0d6efd, #6610f2);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-        .job {
-            display: flex;
-            flex-direction: column;
-            background: #f5f5f5;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+    header h1 {
+      font-size: 1.8rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-        .job img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
+    .jobs-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 30px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-        .job-description {
-            padding: 20px;
-        }
+    .job-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .job-description h2 {
-            margin-top: 0;
-            color: #007BFF;
-        }
+    .job-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
 
-        @media (min-width: 768px) {
-            .jobs {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
+    .job-content {
+      padding: 20px;
+    }
 
-            .job {
-                width: 48%;
-            }
-        }
-    </style>
+    .job-content h2 {
+      color: #0d6efd;
+      margin-bottom: 10px;
+    }
+
+    .job-content ul {
+      padding-left: 20px;
+      list-style: disc;
+      margin-top: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .job-card {
+        flex-direction: row;
+      }
+
+      .job-card img {
+        width: 40%;
+        height: auto;
+      }
+
+      .job-content {
+        width: 60%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="hero">
-        <h1>Découvrez les offres d'emploi à Dubai que nous pouvons vous aider à décrocher en seulement une semaine</h1>
-    </header>
 
-    <main class="jobs">
-        <section class="job">
-            <img src="https://i.imgur.com/DrkPYKZ.jpg" alt="Garde de Sécurité">
-            <div class="job-description">
-                <h2>Garde de sécurité</h2>
-                <p>Contrat de 2 ans renouvelable. Logement fourni, salaire attractif. Expérience non obligatoire mais appréciée.</p>
-            </div>
-        </section>
-        <section class="job">
-            <img src="https://i.imgur.com/fYINszU.jpg" alt="Cleaner">
-            <div class="job-description">
-                <h2>Cleaner</h2>
-                <p>Nettoyage d'immeubles ou bureaux. Bonnes conditions de travail. Salaire fixe mensuel avec heures supplémentaires.</p>
-            </div>
-        </section>
-        <section class="job">
-            <img src="https://i.imgur.com/n8s6SOv.jpg" alt="General Helper">
-            <div class="job-description">
-                <h2>General Helper</h2>
-                <p>Poste polyvalent dans des entrepôts ou chantiers. Formation sur place, hébergement offert.</p>
-            </div>
-        </section>
-        <section class="job">
-            <img src="https://i.imgur.com/k6kXxus.jpg" alt="Livreur Talabat">
-            <div class="job-description">
-                <h2>Livreur à moto (Talabat)</h2>
-                <p>Travail avec application Talabat. Nécessite permis moto. Gains à la livraison + primes journalières.</p>
-            </div>
-        </section>
-    </main>
+  <header>
+    <h1>Découvrez les offres d'emploi à Dubai que nous pouvons vous aider à décrocher en seulement une semaine</h1>
+  </header>
+
+  <main class="jobs-container">
+
+    <div class="job-card">
+      <img src="https://i.imgur.com/G7l0kpK.jpg" alt="Garde de Sécurité à Dubai">
+      <div class="job-content">
+        <h2>Garde de Sécurité</h2>
+        <p>Travail stable avec bonne sécurité et avantages.</p>
+        <ul>
+          <li>Contrat de 2 ans renouvelable</li>
+          <li>Logement gratuit</li>
+          <li>Salaire de 1000 - 1500 AED</li>
+          <li>Travail 6 jours/semaine</li>
+          <li>Formation sur place incluse</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job-card">
+      <img src="https://i.imgur.com/pqRCBcm.jpg" alt="Agent de Nettoyage à Dubai">
+      <div class="job-content">
+        <h2>Agent de Nettoyage (Cleaner)</h2>
+        <p>Entretien des bureaux, hôtels et résidences.</p>
+        <ul>
+          <li>Contrat de 2 ans renouvelable</li>
+          <li>Salaire 900 - 1200 AED</li>
+          <li>Heures supplémentaires payées</li>
+          <li>Transport et logement fournis</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job-card">
+      <img src="https://i.imgur.com/xLV7NKe.jpg" alt="General Helper Dubai">
+      <div class="job-content">
+        <h2>Aide Générale (General Helper)</h2>
+        <p>Assistance dans les entrepôts et les chantiers.</p>
+        <ul>
+          <li>Travail physique, simple mais régulier</li>
+          <li>Salaire mensuel de 1100 AED + bonus</li>
+          <li>Pas d'expérience nécessaire</li>
+          <li>Logement et uniforme offerts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job-card">
+      <img src="https://i.imgur.com/bsJvsAC.jpg" alt="Livreur Talabat Moto Dubai">
+      <div class="job-content">
+        <h2>Livreur à Moto (Talabat)</h2>
+        <p>Livraison de nourriture avec application mobile.</p>
+        <ul>
+          <li>Permis moto requis</li>
+          <li>Gain par livraison (10-15 AED)</li>
+          <li>Possibilité de gagner jusqu’à 3000 AED/mois</li>
+          <li>Moto + équipement fournis sur place</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
 </body>
 </html>
