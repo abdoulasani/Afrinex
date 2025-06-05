@@ -316,34 +316,196 @@
   <h2>Nos clients témoignent en vidéo</h2>
   <div class="temoignages-slider">
 
-    <div class="temoignage-card" onclick="window.open('https://drive.google.com/file/d/1FkDC9UXbEYYRCrj0_puAU2s2b6u4g9LH/view', '_blank')">
-      <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg');"></div>
-      <div class="temoignage-description">🇪🇹 Clients d’Éthiopie — Visa emploi Dubaï obtenu</div>
+    <div class="temoignage-card" data-video="https://drive.google.com/file/d/1FkDC9UXbEYYRCrj0_puAU2s2b6u4g9LH/preview">
+      <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180?text=Éthiopie');"></div>
+      <div class="temoignage-description">🇪🇹 Client d’Éthiopie – Visa obtenu</div>
     </div>
 
-     <div class="temoignage-card" onclick="window.open('https://drive.google.com/file/d/1gDG8Q5XFxu1vaZ7PfsCMAClGYNhNce6g/view', '_blank')">
-      <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180?text=Client+Ghana');"></div>
-      <div class="temoignage-description">NE Client depuis — emploi validé à Dubaï</div>
+    <div class="temoignage-card" data-video="https://drive.google.com/file/d/1wB7H0Af6TdHLHsCBVRlVforHe3FsCV7M/preview">
+      <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180?text=Niger');"></div>
+      <div class="temoignage-description">🇳🇪 Clients reçus à l’aéroport</div>
     </div>
 
-    <div class="temoignage-card" onclick="window.open('https://drive.google.com/file/d/1utdQmCQCkv-1Vw3FVKGHEC4_VF_wBCCw/view', '_blank')">
-      <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180?text=Vidéo+Sénégal');"></div>
-      <div class="temoignage-description">🇸🇳 Client satisfait venu depuis Guinee Conakri — visa confirmé</div>
-    </div>
-    
-    <div class="temoignage-card" onclick="window.open('https://drive.google.com/file/d/1wB7H0Af6TdHLHsCBVRlVforHe3FsCV7M/view', '_blank')">
-      <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180?text=Vidéo+Niger');"></div>
-      <div class="temoignage-description">🇳🇪 Réception de 2 clients à l’aéroport – Visa emploi</div>
+    <div class="temoignage-card" data-video="https://drive.google.com/file/d/1utdQmCQCkv-1Vw3FVKGHEC4_VF_wBCCw/preview">
+      <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180?text=Sénégal');"></div>
+      <div class="temoignage-description">🇸🇳 Client satisfait du Sénégal</div>
     </div>
 
-    
-
-    <div class="temoignage-card" onclick="window.open('https://drive.google.com/file/d/12_L7BEGXUwemOUixc1CWb6kdfOGr1mfE/view', '_blank')">
-      <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180?text=Aéroport+Dubai');"></div>
-      <div class="temoignage-description">🇳🇪 Réception client à l’aéroport Dubai — Niger</div>
+    <div class="temoignage-card" data-video="https://drive.google.com/file/d/12_L7BEGXUwemOUixc1CWb6kdfOGr1mfE/preview">
+      <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180?text=Dubaï');"></div>
+      <div class="temoignage-description">🇳🇪 Accueil à l’aéroport Dubai</div>
     </div>
 
-   
+    <div class="temoignage-card" data-video="https://drive.google.com/file/d/1gDG8Q5XFxu1vaZ7PfsCMAClGYNhNce6g/preview">
+      <div class="video-thumbnail" style="background-image: url('https://via.placeholder.com/300x180?text=Ghana');"></div>
+      <div class="temoignage-description">🇬🇭 Client du Ghana satisfait</div>
+    </div>
+
+  </div>
+
+  <div class="btn-wrapper">
+    <button class="btn-suivant" onclick="document.querySelector('.temoignages-slider').scrollBy({left: 320, behavior: 'smooth'})">▶ Voir d'autres témoignages</button>
+  </div>
+</section>
+
+<!-- Modale vidéo -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal-content">
+    <span class="video-close" onclick="closeVideoModal()">×</span>
+    <iframe id="videoFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+<style>
+.temoignages-slider-section {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  text-align: center;
+}
+
+.temoignages-slider-section h2 {
+  font-size: 1.8rem;
+  color: #0d6efd;
+  margin-bottom: 40px;
+}
+
+.temoignages-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.temoignage-card {
+  flex: 0 0 300px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.temoignage-card:hover {
+  transform: scale(1.02);
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 180px;
+  background-color: #ccc;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.video-thumbnail::after {
+  content: '▶';
+  font-size: 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.temoignage-description {
+  padding: 15px 20px;
+  font-size: 1rem;
+  color: #212529;
+}
+
+.temoignages-slider::-webkit-scrollbar {
+  display: none;
+}
+.temoignages-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.btn-wrapper {
+  margin-top: 30px;
+}
+
+.btn-suivant {
+  padding: 12px 24px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-suivant:hover {
+  background-color: #0b5ed7;
+}
+
+/* Modale vidéo */
+.video-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.video-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+}
+
+.video-modal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.video-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+</style>
+
+<script>
+  document.querySelectorAll('.temoignage-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const videoSrc = this.getAttribute('data-video');
+      const iframe = document.getElementById('videoFrame');
+      iframe.src = videoSrc;
+      document.getElementById('videoModal').style.display = 'flex';
+    });
+  });
+
+  function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('videoFrame');
+    iframe.src = "";
+    modal.style.display = 'none';
+  }
+</script>
+
 
   </div>
 </section>
