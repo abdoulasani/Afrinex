@@ -615,7 +615,7 @@
     .temoignages-container {
       position: relative;
       overflow: hidden;
-      max-width: 1000px;
+      max-width: 765px;
       margin: auto;
     }
 
@@ -899,39 +899,44 @@
 
   <div class="temoignages-container">
     <div class="temoignages-track" id="temoignagesTrack">
+
+      <!-- 1 -->
       <div class="temoignage-card">
         <div class="video-preview-wrapper" onclick="playVideo(this)">
-          <img class="video-preview-image" src="https://raw.githubusercontent.com/abdoulasani/Afrinex/main/temoignage-preview.jpg.png" alt="Preview">
+          <img class="video-preview-image" src="https://raw.githubusercontent.com/abdoulasani/Afrinex/main/temoignage-preview.png" alt="Preview">
           <div class="preview-play-button">▶️</div>
         </div>
         <iframe class="temoignage-video" src="https://drive.google.com/file/d/1FkDC9UXbEYYRCrj0_puAU2s2b6u4g9LH/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <div class="temoignage-description">Merci Afrinext - Visa obtenu pour Dubai !</div>
       </div>
-       
+
+      <!-- 2 -->
       <div class="temoignage-card">
-        <div class="video-preview-wrapper" onclick="playVideo(this)">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1wB7H0Af6TdHLHsCBVRlVforHe3FsCV7M/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1wB7H0Af6TdHLHsCBVRlVforHe3FsCV7M/preview" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe>
         <div class="temoignage-description">Réception clients depuis le Niger</div>
       </div>
 
+      <!-- 3 -->
       <div class="temoignage-card">
-        <div class="video-preview-wrapper" onclick="playVideo(this)">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1utdQmCQCkv-1Vw3FVKGHEC4_VF_wBCCw/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1utdQmCQCkv-1Vw3FVKGHEC4_VF_wBCCw/preview" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe>
         <div class="temoignage-description">Client satisfait depuis le Sénégal</div>
       </div>
 
+      <!-- 4 -->
       <div class="temoignage-card">
-        <div class="video-preview-wrapper" onclick="playVideo(this)">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/12_L7BEGXUwemOUixc1CWb6kdfOGr1mfE/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div class="temoignage-description">À l'aéroport Dubai – visa emploi</div>
+        <iframe class="temoignage-video" src="https://drive.google.com/file/d/12_L7BEGXUwemOUixc1CWb6kdfOGr1mfE/preview" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe>
+        <div class="temoignage-description">Client accueilli à l'aéroport de Dubai – Niger</div>
       </div>
 
+      <!-- 5 -->
       <div class="temoignage-card">
-        <div class="video-preview-wrapper" onclick="playVideo(this)">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1gDG8Q5XFxu1vaZ7PfsCMAClGYNhNce6g/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div class="temoignage-description">Réception depuis le Ghana</div>
+        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1gDG8Q5XFxu1vaZ7PfsCMAClGYNhNce6g/preview" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe>
+        <div class="temoignage-description">Réception de notre client du Ghana</div>
       </div>
+
     </div>
+  </div>
+
   <div class="nav-buttons">
     <button onclick="scrollTemoignages(-1)">⬅️ Précédent</button>
     <button onclick="scrollTemoignages(1)">Suivant ➡️</button>
@@ -946,27 +951,4 @@
   <a class="footer-whatsapp" href="https://wa.me/22790509717" target="_blank">💬 Contactez-nous sur WhatsApp</a>
   <p style="margin-top: 20px;">&copy; Afrinext Group 2025 - Tous droits réservés</p>
 </footer>
-
-<script>
-function playVideo(wrapper) {
-  const iframe = wrapper.nextElementSibling;
-  wrapper.style.display = 'none';
-  iframe.style.display = 'block';
-}
-
-let scrollIndex = 0;
-function scrollTemoignages(dir) {
-  const track = document.getElementById('temoignagesTrack');
-  const cardWidth = track.querySelector('.temoignage-card').offsetWidth + 20;
-  scrollIndex += dir;
-  scrollIndex = Math.max(0, scrollIndex);
-  const maxScroll = track.children.length - 1;
-  if (scrollIndex > maxScroll) scrollIndex = maxScroll;
-  track.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
-}
-</script>
-
-</body>
-</html>
-
 
