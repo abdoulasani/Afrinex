@@ -584,69 +584,66 @@
 </head>
 <body>
 
-<!-- SECTION TÉMOIGNAGES -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Offres d'emploi à Dubaï</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Témoignages Clients - Afrinext</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
       margin: 0;
+      background-color: #fdfdfd;
+      color: #333;
     }
 
-    /* Témoignages */
     .temoignages-section {
-      background: #fff;
       padding: 60px 20px;
+      background: linear-gradient(to right, #f2f8ff, #e6f0fc);
       text-align: center;
     }
 
     .temoignages-section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-      color: #0d6efd;
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 40px;
     }
 
     .temoignages-container {
       position: relative;
-      overflow: hidden;
-      max-width: 765px;
+      max-width: 1100px;
       margin: auto;
+      overflow: hidden;
     }
 
     .temoignages-track {
       display: flex;
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.5s ease;
       gap: 20px;
     }
 
     .temoignage-card {
-      min-width: 300px;
-      background: #f1f1f1;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
       flex-shrink: 0;
+      min-width: 300px;
+      max-width: 100%;
+      border-radius: 15px;
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
     }
 
     .video-preview-wrapper {
       position: relative;
       cursor: pointer;
-      width: 100%;
       aspect-ratio: 16/9;
-      overflow: hidden;
     }
 
     .video-preview-image {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.85);
+      filter: brightness(0.9);
     }
 
     .preview-play-button {
@@ -655,7 +652,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 3rem;
-      color: #fff;
+      color: white;
       text-shadow: 0 0 10px #000;
     }
 
@@ -669,29 +666,60 @@
     .temoignage-description {
       padding: 15px;
       font-size: 0.95rem;
-      background-color: white;
-      color: #333;
+      background-color: #f9fbfe;
+      color: #003366;
     }
 
     .nav-buttons {
       margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
     }
 
     .nav-buttons button {
-      padding: 15px 30px;
+      padding: 14px 25px;
       font-size: 1rem;
-      background-color: #0d6efd;
+      font-weight: 600;
+      background: #0056b3;
       color: white;
       border: none;
-      border-radius: 6px;
-      margin: 0 10px;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
       cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
+      transition: background 0.3s ease;
     }
 
     .nav-buttons button:hover {
-      background-color: #0b5ed7;
-      transform: scale(1.05);
+      background: #003d80;
+    }
+
+    footer {
+      background: linear-gradient(to right, #003366, #001f3f);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #00d4ff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-whatsapp {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .footer-whatsapp:hover {
+      background-color: #1ebe57;
     }
 
     @media (max-width: 768px) {
@@ -704,187 +732,6 @@
         gap: 10px;
       }
     }
-
-    /* Footer */
-    footer {
-      background-color: #343a40;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    footer a {
-      color: #0dcaf0;
-      text-decoration: none;
-      margin: 0 10px;
-      display: inline-block;
-    }
-
-    .footer-whatsapp {
-      display: inline-block;
-      margin-top: 10px;
-      background-color: #25d366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .footer-whatsapp:hover {
-      background-color: #1ebe57;
-    }
-
-    .footer-links {
-      margin-bottom: 15px;
-    }
-  </style>
-</head>
-<body>
-
-
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Témoignages Afrinext</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f9fb;
-      color: #222;
-    }
-
-    h2 {
-      text-align: center;
-      margin: 30px 20px 10px;
-      font-size: 28px;
-      color: #1c3d5a;
-    }
-
-    .temoignages-section {
-      padding: 20px;
-      max-width: 100%;
-      overflow: hidden;
-    }
-
-    .temoignages-container {
-      overflow: hidden;
-      position: relative;
-    }
-
-    .temoignages-track {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-    }
-
-    .temoignage-card {
-      flex: 0 0 300px;
-      margin: 0 10px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .video-preview-wrapper {
-      position: relative;
-      cursor: pointer;
-    }
-
-    .video-preview-image {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .preview-play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 40px;
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border-radius: 50%;
-      padding: 10px;
-    }
-
-    .temoignage-video {
-      display: none;
-      width: 100%;
-      height: 180px;
-      border: none;
-    }
-
-    .temoignage-description {
-      padding: 10px;
-      font-size: 14px;
-      text-align: center;
-      color: #333;
-    }
-
-    .nav-buttons {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .nav-buttons button {
-      background-color: #1c3d5a;
-      color: #fff;
-      border: none;
-      padding: 12px 20px;
-      margin: 0 10px;
-      border-radius: 30px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .nav-buttons button:hover {
-      background-color: #286090;
-    }
-
-    footer {
-      background-color: #1c3d5a;
-      color: #fff;
-      text-align: center;
-      padding: 30px 15px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #ffd700;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-
-    .footer-whatsapp {
-      display: block;
-      margin-top: 10px;
-      font-size: 16px;
-      color: #25D366;
-    }
-
-    @media (max-width: 768px) {
-      .temoignage-card {
-        flex: 0 0 90%;
-      }
-
-      .video-preview-image, .temoignage-video {
-        height: 200px;
-      }
-
-      .nav-buttons button {
-        width: 40%;
-        margin: 10px 0;
-      }
-    }
   </style>
 </head>
 <body>
@@ -894,37 +741,15 @@
 
   <div class="temoignages-container">
     <div class="temoignages-track" id="temoignagesTrack">
-      <!-- 1 -->
-            <div class="temoignage-card">
+      <div class="temoignage-card">
         <div class="video-preview-wrapper" onclick="playVideo(this)">
-          <img class="video-preview-image" src="https://raw.githubusercontent.com/abdoulasani/Afrinex/main/temoignage-preview.png" alt="Preview témoignage Afrinex">
+          <img class="video-preview-image" src="https://raw.githubusercontent.com/abdoulasani/Afrinex/main/temoignage-preview.png" alt="Preview">
           <div class="preview-play-button">▶️</div>
         </div>
         <iframe class="temoignage-video" src="https://drive.google.com/file/d/1FkDC9UXbEYYRCrj0_puAU2s2b6u4g9LH/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div class="temoignage-description">Nos clients d'Éthiopie qui ont obtenu leur visa emploi Dubai</div>
+        <div class="temoignage-description">Merci Afrinext - Visa obtenu pour Dubai !</div>
       </div>
-
-      <!-- Autres témoignages -->
-      <div class="temoignage-card">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1wB7H0Af6TdHLHsCBVRlVforHe3FsCV7M/preview" allow="autoplay; encrypted-media" allowfullscreen style="display: block;"></iframe>
-        <div class="temoignage-description">Réception de nos deux clients à l'aéroport — visa emploi depuis le Niger</div>
-      </div>
-
-      <div class="temoignage-card">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1utdQmCQCkv-1Vw3FVKGHEC4_VF_wBCCw/preview" allow="autoplay; encrypted-media" allowfullscreen style="display: block;"></iframe>
-        <div class="temoignage-description">Réception de notre client satisfait depuis le Sénégal</div>
-      </div>
-
-      <div class="temoignage-card">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/12_L7BEGXUwemOUixc1CWb6kdfOGr1mfE/preview" allow="autoplay; encrypted-media" allowfullscreen style="display: block;"></iframe>
-        <div class="temoignage-description">À l'aéroport de Dubaï — client depuis le Niger, visa emploi</div>
-      </div>
-
-      <div class="temoignage-card">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1gDG8Q5XFxu1vaZ7PfsCMAClGYNhNce6g/preview" allow="autoplay; encrypted-media" allowfullscreen style="display: block;"></iframe>
-        <div class="temoignage-description">Réception de notre client depuis le Ghana, visa emploi</div>
-      </div>
-
+      <!-- autres cartes ici -->
     </div>
   </div>
 
@@ -946,8 +771,6 @@
 <script>
 function playVideo(wrapper) {
   const iframe = wrapper.nextElementSibling;
-  const src = iframe.getAttribute('src');
-  iframe.setAttribute('src', src); // Recharge pour lancer
   wrapper.style.display = 'none';
   iframe.style.display = 'block';
 }
