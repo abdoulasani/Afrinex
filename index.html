@@ -427,6 +427,163 @@
 </head>
 <body>
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offres d'emploi à Dubaï</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+      margin: 0;
+    }
+
+    /* Témoignages */
+    .temoignages-section {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .temoignages-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      color: #0d6efd;
+    }
+
+    .temoignages-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .temoignages-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 20px;
+    }
+
+    .temoignage-card {
+      min-width: 300px;
+      background: #f1f1f1;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .video-preview-wrapper {
+      position: relative;
+      cursor: pointer;
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+    }
+
+    .video-preview-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.85);
+    }
+
+    .preview-play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 0 0 10px #000;
+    }
+
+    .temoignage-video {
+      width: 100%;
+      height: 200px;
+      border: none;
+      display: none;
+    }
+
+    .temoignage-description {
+      padding: 15px;
+      font-size: 0.95rem;
+      background-color: white;
+      color: #333;
+    }
+
+    .nav-buttons {
+      margin-top: 30px;
+    }
+
+    .nav-buttons button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #0b5ed7;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .temoignage-card {
+        min-width: 90%;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #0dcaf0;
+      text-decoration: none;
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .footer-whatsapp {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer-whatsapp:hover {
+      background-color: #1ebe57;
+    }
+
+    .footer-links {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
 <!-- SECTION TÉMOIGNAGES -->
 <section class="temoignages-section">
   <h2>Nos résultats parlent — découvrez les témoignages de nos clients</h2>
@@ -437,7 +594,7 @@
       <!-- Témoignage 1 (avec preview personnalisé) -->
       <div class="temoignage-card">
         <div class="video-preview-wrapper" onclick="playVideo(this)">
-          <img class="video-preview-image" src="https://raw.githubusercontent.com/abdoulasani/Afrinex/main/temoignage-preview.jpg" alt="Preview témoignage Afrinex">
+          <img class="video-preview-image" src="https://raw.githubusercontent.com/abdoulasani/Afrinex/main/temoignage-preview.png" alt="Preview témoignage Afrinex">
           <div class="preview-play-button">▶️</div>
         </div>
         <iframe class="temoignage-video" src="https://drive.google.com/file/d/1FkDC9UXbEYYRCrj0_puAU2s2b6u4g9LH/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -474,6 +631,16 @@
   </div>
 </section>
 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="https://afrinextgroup.org/">🏠 Retour à l'accueil</a> |
+    <a href="mailto:info@afrinextgroup.org">📧 info@afrinextgroup.org</a>
+  </div>
+  <a class="footer-whatsapp" href="https://wa.me/22790509717" target="_blank">📱 Contactez-nous sur WhatsApp</a>
+  <p style="margin-top: 20px;">&copy; Afrinext Group 2025 — Tous droits réservés</p>
+</footer>
+
 <script>
 function playVideo(previewWrapper) {
   const iframe = previewWrapper.nextElementSibling;
@@ -495,12 +662,3 @@ function scrollTemoignages(direction) {
 </body>
 </html>
 
-
-
-  </div>
-</section>
-
-
-  </main>
-</body>
-</html>
