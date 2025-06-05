@@ -742,44 +742,172 @@
 </head>
 <body>
 
-<!-- SECTION TÉMOIGNAGES -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Témoignages Clients - Afrinext</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    .temoignages-section {
+      padding: 60px 20px;
+      background: linear-gradient(to right, #f2f8ff, #e6f0fc);
+      text-align: center;
+    }
+
+    .temoignages-section h2 {
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 40px;
+    }
+
+    .temoignages-container {
+      position: relative;
+      max-width: 1100px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .temoignages-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      gap: 20px;
+    }
+
+    .temoignage-card {
+      flex-shrink: 0;
+      min-width: 300px;
+      max-width: 100%;
+      border-radius: 15px;
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .video-preview-wrapper {
+      position: relative;
+      cursor: pointer;
+      aspect-ratio: 16/9;
+    }
+
+    .video-preview-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.9);
+    }
+
+    .preview-play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: white;
+      text-shadow: 0 0 10px #000;
+    }
+
+    .temoignage-video {
+      width: 100%;
+      height: 200px;
+      border: none;
+      display: none;
+    }
+
+    .temoignage-description {
+      padding: 15px;
+      font-size: 0.95rem;
+      background-color: #f9fbfe;
+      color: #003366;
+    }
+
+    .nav-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .nav-buttons button {
+      padding: 14px 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      background: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .nav-buttons button:hover {
+      background: #003d80;
+    }
+
+    footer {
+      background: linear-gradient(to right, #003366, #001f3f);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #00d4ff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-whatsapp {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .footer-whatsapp:hover {
+      background-color: #1ebe57;
+    }
+
+    @media (max-width: 768px) {
+      .temoignage-card {
+        min-width: 90%;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
 <section class="temoignages-section">
-  <h2>Nos résultats parlent — découvrez les témoignages de nos clients</h2>
+  <h2>Nos clients témoignent de leur succès avec Afrinext</h2>
 
   <div class="temoignages-container">
     <div class="temoignages-track" id="temoignagesTrack">
-
-      <!-- Témoignage 1 (avec preview personnalisé) -->
       <div class="temoignage-card">
         <div class="video-preview-wrapper" onclick="playVideo(this)">
-          <img class="video-preview-image" src="https://raw.githubusercontent.com/abdoulasani/Afrinex/main/temoignage-preview.png" alt="Preview témoignage Afrinex">
+          <img class="video-preview-image" src="https://raw.githubusercontent.com/abdoulasani/Afrinex/main/temoignage-preview.png" alt="Preview">
           <div class="preview-play-button">▶️</div>
         </div>
         <iframe class="temoignage-video" src="https://drive.google.com/file/d/1FkDC9UXbEYYRCrj0_puAU2s2b6u4g9LH/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div class="temoignage-description">Nos clients d'Éthiopie qui ont obtenu leur visa emploi Dubai</div>
+        <div class="temoignage-description">Merci Afrinext - Visa obtenu pour Dubai !</div>
       </div>
-
-      <!-- Autres témoignages -->
-      <div class="temoignage-card">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1wB7H0Af6TdHLHsCBVRlVforHe3FsCV7M/preview" allow="autoplay; encrypted-media" allowfullscreen style="display: block;"></iframe>
-        <div class="temoignage-description">Réception de nos deux clients à l'aéroport — visa emploi depuis le Niger</div>
-      </div>
-
-      <div class="temoignage-card">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1utdQmCQCkv-1Vw3FVKGHEC4_VF_wBCCw/preview" allow="autoplay; encrypted-media" allowfullscreen style="display: block;"></iframe>
-        <div class="temoignage-description">Réception de notre client satisfait depuis le Sénégal</div>
-      </div>
-
-      <div class="temoignage-card">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/12_L7BEGXUwemOUixc1CWb6kdfOGr1mfE/preview" allow="autoplay; encrypted-media" allowfullscreen style="display: block;"></iframe>
-        <div class="temoignage-description">À l'aéroport de Dubaï — client depuis le Niger, visa emploi</div>
-      </div>
-
-      <div class="temoignage-card">
-        <iframe class="temoignage-video" src="https://drive.google.com/file/d/1gDG8Q5XFxu1vaZ7PfsCMAClGYNhNce6g/preview" allow="autoplay; encrypted-media" allowfullscreen style="display: block;"></iframe>
-        <div class="temoignage-description">Réception de notre client depuis le Ghana, visa emploi</div>
-      </div>
-
+      <!-- autres cartes ici -->
     </div>
   </div>
 
@@ -789,30 +917,30 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-links">
-    <a href="https://afrinextgroup.org/">🏠 Retour à l'accueil</a> |
+  <div>
+    <a href="https://afrinextgroup.org/">🏠 Page d'accueil</a> |
     <a href="mailto:info@afrinextgroup.org">📧 info@afrinextgroup.org</a>
   </div>
-  <a class="footer-whatsapp" href="https://wa.me/22790509717" target="_blank">📱 Contactez-nous sur WhatsApp</a>
-  <p style="margin-top: 20px;">&copy; Afrinext Group 2025 — Tous droits réservés</p>
+  <a class="footer-whatsapp" href="https://wa.me/22790509717" target="_blank">💬 Contactez-nous sur WhatsApp</a>
+  <p style="margin-top: 20px;">&copy; Afrinext Group 2025 - Tous droits réservés</p>
 </footer>
 
 <script>
-function playVideo(previewWrapper) {
-  const iframe = previewWrapper.nextElementSibling;
-  previewWrapper.style.display = 'none';
+function playVideo(wrapper) {
+  const iframe = wrapper.nextElementSibling;
+  wrapper.style.display = 'none';
   iframe.style.display = 'block';
 }
 
 let scrollIndex = 0;
-function scrollTemoignages(direction) {
+function scrollTemoignages(dir) {
   const track = document.getElementById('temoignagesTrack');
   const cardWidth = track.querySelector('.temoignage-card').offsetWidth + 20;
-  scrollIndex += direction;
+  scrollIndex += dir;
+  scrollIndex = Math.max(0, scrollIndex);
   const maxScroll = track.children.length - 1;
-  scrollIndex = Math.max(0, Math.min(scrollIndex, maxScroll));
+  if (scrollIndex > maxScroll) scrollIndex = maxScroll;
   track.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
 }
 </script>
